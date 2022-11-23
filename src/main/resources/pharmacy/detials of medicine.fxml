@@ -7,10 +7,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.PrimaryController">
    <children>
       <Pane id="nav_bar" prefHeight="60.0" prefWidth="256.0" style="-fx-background-color: #1D242E;">
          <children>
@@ -26,7 +25,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane layoutY="58.0" prefHeight="662.0" prefWidth="1280.0" style="-fx-border-image-width: black; -fx-background-radius: 20;">
+      <Pane layoutY="58.0" prefHeight="662.0" prefWidth="1280.0" style="-fx-border-image-width: black; -fx-border-color: black;">
          <children>
             <Pane layoutY="56.0" prefHeight="46.0" prefWidth="256.0" style="-fx-background-color: #1D242E; -fx-background-radius: 0 20 20 0;" styleClass="border-radius: 0px 20px 20px 0px;">
                <children>
@@ -73,56 +72,62 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="313.0" layoutY="32.0" prefHeight="32.0" prefWidth="117.0" text="Reports :">
+            <Label layoutX="313.0" layoutY="32.0" prefHeight="32.0" prefWidth="94.0" text="Invontry " textFill="#a6a6a6">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="361.0" layoutY="70.0" text="A quick data overview of the inventory" />
-            <Pane layoutX="313.0" layoutY="429.0" prefHeight="174.0" prefWidth="890.0" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;">
-               <children>
-                  <Label layoutX="72.0" layoutY="13.0" text="Group name">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="385.0" layoutY="13.0" text="No of medacine">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="750.0" layoutY="13.0" text="Action">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Line endX="670.0" endY="-70.20001220703125" layoutX="220.0" layoutY="110.0" startX="-220.0" startY="-70.20001220703125" strokeWidth="3.0" />
-                  <Line endX="669.0" endY="-70.20001220703125" layoutX="221.0" layoutY="155.0" startX="-220.0" startY="-70.20001220703125" strokeWidth="3.0" />
-                  <Line endX="669.0" endY="-70.20001220703125" layoutX="221.0" layoutY="199.0" startX="-220.0" startY="-70.20001220703125" strokeWidth="3.0" />
-                  <Label layoutX="73.0" layoutY="54.0" text="Generic medicine" />
-                  <Label layoutX="439.0" layoutY="54.0" text="02" />
-                  <Label layoutX="723.0" layoutY="54.0" text="remove form group" textFill="RED" />
-                  <Label layoutX="73.0" layoutY="98.0" text="Generic medicine" />
-                  <Label layoutX="73.0" layoutY="143.0" text="Generic medicine" />
-                  <Label layoutX="439.0" layoutY="98.0" text="03" />
-                  <Label layoutX="439.0" layoutY="143.0" text="03" />
-                  <Label layoutX="723.0" layoutY="98.0" text="remove form group" textFill="RED" />
-                  <Label layoutX="723.0" layoutY="143.0" text="remove form group" textFill="RED" />
-               </children>
-            </Pane>
-            <Label layoutX="1101.0" layoutY="68.0" prefHeight="43.0" prefWidth="137.0" style="-fx-border-color: balck; -fx-background-color: red; -fx-background-radius: 20;" text="  + add new group" textFill="WHITE">
+            <TableView layoutX="339.0" layoutY="158.0" prefHeight="109.0" prefWidth="326.0">
+              <columns>
+                <TableColumn prefWidth="325.20001220703125" text="Medicine" />
+              </columns>
+            </TableView>
+            <TableView layoutX="858.0" layoutY="158.0" prefHeight="109.0" prefWidth="326.0">
+               <columns>
+                  <TableColumn prefWidth="325.20001220703125" text="Inventory in Qty" />
+               </columns>
+            </TableView>
+            <TableView layoutX="339.0" layoutY="306.0" prefHeight="109.0" prefWidth="843.0">
+               <columns>
+                  <TableColumn prefWidth="842.1999816894531" text="How to use" />
+               </columns>
+            </TableView>
+            <TableView layoutX="341.0" layoutY="453.0" prefHeight="109.0" prefWidth="843.0">
+               <columns>
+                  <TableColumn prefWidth="842.2000122070312" text="Side Effects" />
+               </columns>
+            </TableView>
+            <Label layoutX="339.0" layoutY="608.0" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: red; -fx-background-radius: 5;" text=" Delete medicine" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TableView layoutX="319.0" layoutY="160.0" prefHeight="200.0" prefWidth="877.0">
-              <columns>
-                <TableColumn prefWidth="296.79998779296875" text="Group Name" />
-                <TableColumn minWidth="0.0" prefWidth="328.0" text="No of medacine" />
-                  <TableColumn prefWidth="252.800048828125" text="Action" />
-                  <TableColumn prefWidth="75.0" text="Column X" />
-              </columns>
-            </TableView>
+            <Label layoutX="1059.0" layoutY="71.0" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: blue; -fx-background-radius: 5;" text="       Edit detials" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="429.0" layoutY="32.0" prefHeight="32.0" prefWidth="161.0" text="list of medicine" textFill="#999999">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="618.0" layoutY="32.0" prefHeight="32.0" prefWidth="102.0" text="Invontry ">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="407.0" layoutY="32.0" prefHeight="32.0" prefWidth="13.0" text="&gt;">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="597.0" layoutY="32.0" prefHeight="32.0" prefWidth="13.0" text="&gt;">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="346.0" layoutY="76.0" text="List of medicines available for sales" />
          </children>
       </Pane>
    </children>
